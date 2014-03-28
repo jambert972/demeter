@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="fr"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="fr"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="fr"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="fr">
+<!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+<title>Groupe D&eacute;m&eacute;ter</title>
+<meta name="description" content="Site de l'association du Groupe Déméter">
+<meta name="author" content="BTS SIO">
+<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+{%block stylesheet%}
+<link rel="stylesheet" href="{{asset('css/base.css')}}">
+<link rel="stylesheet" href="{{asset('css/skeleton.css')}}">
+<link rel="stylesheet" href="{{asset('css/screen.css')}}">
+<link rel="stylesheet" href="{{asset('css/prettyPhoto.css')}}" type="text/css" media="screen" />
+{%endblock%}
+<link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
+<link rel="apple-touch-icon" href="{{asset('images/apple-touch-icon.png')}}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{asset('images/apple-touch-icon-72x72.png')}}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{asset('images/apple-touch-icon-114x114.png')}}">
+
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<body>
+
+ <div id="header">
+  <div class="container header"> 
+
+    <header>
+      <div class="logo">
+       <img src="{{asset('images/Logo_3.png')}}" alt="" />
+      </div>
+      <div class="mainmenu">
+       <div id="mainmenu">
+        <ul class="sf-menu">
+         <li><a href="{{path('accueil')}}" onclick="XHR(0,11,'');" id="visited">
+          <span class="home"><img src="{{asset('images/accueil.png')}}" alt="" /></span>Accueil</a>
+         </li>
+         <li><a href="#" onclick="XHR(0,21,'');">
+          <span class="home"><img src="{{asset('images/association.png')}}" alt="" /></span>Association</a>
+          <ul>
+           <li><a href="{{path('objectifs')}}" onclick="XHR(0,21,'');">Objectifs</a></li>
+           <li><a href="{{path('fonctionnement')}}" onclick="XHR(0,22,'');">Fonctionnement</a></li>
+           <li><a href="{{path('processus')}}" onclick="XHR(0,23,'');">Processus</a></li>
+          </ul>
+         </li>
+         <li><a href="#" onclick="XHR(0,31,'');">
+          <span class="home"><img src="{{asset('images/insertion.png')}}" alt="" /></span>Insertion</a>
+          <ul>
+           <li><a href="{{path('chantier')}}" onclick="XHR(0,31,'');">Chantiers ext&eacute;rieurs</a></li>
+           <li><a href="{{path('jardin')}}" onclick="XHR(0,32,'');">Jardin p&eacute;dagogique</a></li>
+           <li><a href="{{path('touffe')}}" onclick="XHR(0,33,'');">Site de la Touffe</a></li>
+           <li><a href="{{path('rodes')}}" onclick="XHR(0,34,'');">Site des Trois Rodes</a></li>
+          </ul>
+         </li>
+         <li>
+          <a href="#" onclick="XHR(0,41,'');"><span class="home"><img src="{{asset('./images/solidarite.png')}}" alt="" /></span>Solidarit&eacute;</a>
+          <ul>
+           <li><a href="#" onclick="XHR(0,41,'');">&Eacute;picerie</a></li>
+           <li><a href="#" onclick="XHR(0,42,'');">Fonctionnement</a></li>
+           <li><a href="#" onclick="XHR(0,43,'');">Organisation</a></li>
+          </ul>
+         </li>
+         <li>
+          <a href="#" onclick="XHR(0,51,'');"><span class="home"><img src="{{asset('./images/village.png')}}" alt="" /></span>Village</a>
+          <ul>
+           <li><a href="#" onclick="XHR(0,51,'');">Projet</a></li>
+           <li><a href="#" onclick="XHR(0,52,'');">Tourisme social</a></li>
+           <li><a href="#" onclick="XHR(0,53,'');">D&eacute;tails</a></li>
+          </ul>
+         </li>
+         <li>
+          <a href="{{path('contact')}}" onclick="XHR(0,61,'');">
+           <span class="home"><img src="{{asset('images/contact.png')}}" alt="" /></span>Contact</a>
+         </li>
+         
+         
+          {%if app.user %}
+         <li>
+          <a href="#" onclick="XHR(0,91,'');"><span class="home"><img src="{{asset('./images/blog.png')}}" alt="" /></span>Gestion</a>
+          <ul>
+           <li><a href="{{path('insererGest')}}" onclick="XHR(0,91,'');">Insertion d'un gestionnaire</a></li>
+           <li><a href="{{path('logout')}}" onclick="XHR(0,92,'');">Déconnexion</a></li>
+          </ul> 
+         </li>
+         {%endif%}
+        </ul>
+       </div>        
+      </div>
+    </header>
+  </div>
+</div>
+<?php  if (($page==0) || ($page==11)): ?>
+
+<div class="flexslider">
+  <ul class="slides">
+    <li><img src="{{asset('images/flexslider/1.jpg')}}" alt=""/></li>
+    <li><img src="{{asset('images/flexslider/2.jpg')}}" alt="" /></li>
+    <li><img src="{{asset('images/flexslider/3.jpg')}}" alt="" /></li>
+  </ul>
+</div>
+{%if app.user %}
+
+{%endif%}
+{%block content%}
+{%endblock%}
+
+<div id="copyright">
+  <div class="container">
+    <div class="eleven columns alpha">
+      <p class="copyright">
+       BTS Services Informatiques aux Organisations   
+       <a href="http://www.vinci-melun.org/">Lyc&eacute;e L&eacute;onard de Vinci</a> MELUN 77<br />
+        Template &quot;Proximet&quot; by <a href="http://www.anarieldesign.com/">Anariel</a>
+      </p>
+    </div>
+  </div>
+ </div>
+
+ <!-- XHR --> 
+ <script src="{{asset('js/xhr.js')}}" type="text/javascript"></script> 
+ <!-- JQuery --> 
+ <script src="{{asset('js/jquery-1.8.0.min.js')}}" type="text/javascript"></script> 
+ <!-- Main js files --> 
+ <script src="{{asset('js/screen.js')}}" type="text/javascript"></script> 
+ <!-- Tooltip --> 
+ <script src="{{asset('js/poshytip-1.0/src/jquery.poshytip.min.js')}}" type="text/javascript"></script> 
+ <!-- Tabs --> 
+ <script src="{{asset('js/tabs.js')}}" type="text/javascript"></script> 
+ <!-- Include prettyPhoto --> 
+ <script src="{{asset('js/jquery.prettyPhoto.js')}}" type="text/javascript"></script> 
+ <!-- Include Superfish --> 
+ <script src="{{asset('js/superfish.js')}}" type="text/javascript"></script> 
+ <script src="{{asset('js/hoverIntent.js')}}" type="text/javascript"></script> 
+ <!-- Flexslider --> 
+ <script src="{{asset('js/jquery.flexslider-min.js')}}" type="text/javascript"></script> 
+ <script type="text/javascript" src="{{asset('js/modernizr.custom.29473.js')}}"></script>
+
+ </body>
+</html>

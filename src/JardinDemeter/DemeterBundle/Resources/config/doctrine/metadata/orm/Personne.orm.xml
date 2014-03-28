@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Personne" table="Personne">
+    <id name="idpersonne" type="integer" column="idPersonne">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nom" type="string" column="nom" length="45" nullable="true"/>
+    <field name="prenom" type="string" column="prenom" length="45" nullable="true"/>
+    <field name="dateNaissance" type="string" column="date_naissance" length="10" nullable="true"/>
+    <field name="lieuNaissance" type="string" column="lieu_naissance" length="45" nullable="true"/>
+    <field name="nationalite" type="string" column="nationalite" length="45" nullable="true"/>
+    <field name="adresse" type="string" column="adresse" length="100" nullable="true"/>
+    <field name="ville" type="string" column="ville" length="45" nullable="true"/>
+    <field name="tel1" type="integer" column="tel1" nullable="true"/>
+    <field name="tel2" type="integer" column="tel2" nullable="true"/>
+    <field name="email" type="string" column="email" length="45" nullable="true"/>
+    <field name="niveauEtude" type="string" column="niveau_etude" length="45" nullable="true"/>
+    <field name="nomDiplome" type="string" column="nom_diplome" length="45" nullable="true"/>
+    <field name="permis" type="string" column="permis" length="3" nullable="true"/>
+    <field name="caces" type="string" column="caces" length="6" nullable="true"/>
+    <field name="situationFamiliale" type="string" column="situation_familiale" length="20" nullable="true"/>
+    <field name="personneCharge" type="string" column="personne_charge" length="5" nullable="true"/>
+    <field name="numPersonneCharge" type="integer" column="num_personne_charge" nullable="true"/>
+    <field name="hebergement" type="string" column="hebergement" length="45" nullable="true"/>
+    <field name="problemeLogement" type="string" column="probleme_logement" length="45" nullable="true"/>
+    <field name="moyenTransport" type="string" column="moyen_transport" length="20" nullable="true"/>
+    <field name="zone" type="string" column="zone" length="3" nullable="true"/>
+    <field name="secteur" type="string" column="secteur" length="10" nullable="true"/>
+    <field name="lieuRattachement" type="string" column="lieu_rattachement" length="45" nullable="true"/>
+    <field name="rsaSocle" type="string" column="rsa_socle" length="45" nullable="true"/>
+    <field name="dateSocle" type="string" column="date_socle" length="10" nullable="true"/>
+    <field name="rsaPlafond" type="string" column="rsa_plafond" length="20" nullable="true"/>
+    <field name="datePlafond" type="string" column="date_plafond" length="10" nullable="true"/>
+    <field name="rsaJeune" type="string" column="rsa_jeune" length="45" nullable="true"/>
+    <field name="dateJeune" type="string" column="date_jeune" length="10" nullable="true"/>
+    <field name="rqth" type="string" column="rqth" length="45" nullable="true"/>
+    <field name="dateRqth" type="string" column="date_rqth" length="10" nullable="true"/>
+    <field name="numRqth" type="integer" column="num_rqth" nullable="true"/>
+    <field name="ass" type="string" column="ass" length="45" nullable="true"/>
+    <field name="dateAss" type="string" column="date_ass" length="10" nullable="true"/>
+    <field name="agrementIae" type="string" column="agrement_iae" length="45" nullable="true"/>
+    <field name="dateIae" type="string" column="date_iae" length="10" nullable="true"/>
+    <field name="inscritPe" type="string" column="inscrit_pe" length="45" nullable="true"/>
+    <field name="datePe" type="string" column="date_pe" length="10" nullable="true"/>
+    <field name="numPe" type="integer" column="num_pe" nullable="true"/>
+    <field name="numSecuriteSociale" type="integer" column="num_securite_sociale" nullable="true"/>
+    <field name="numAllocataire" type="integer" column="num_allocataire" nullable="true"/>
+    <field name="dateAllocataire" type="string" column="date_allocataire" length="10" nullable="true"/>
+  </entity>
+</doctrine-mapping>

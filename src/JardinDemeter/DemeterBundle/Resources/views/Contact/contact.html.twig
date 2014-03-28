@@ -1,0 +1,84 @@
+{% extends "JardinDemeterDemeterBundle::main.html.twig" %}
+{%block content%}
+
+<!-- Contact Content Part - GoogleMap ==================================================
+================================================== -->
+<section class="map"> 
+  <!-- google map -->
+  <div class="map-holder">
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10587.610460864733!2d2.756186079713938!3d48.43920881755287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5f5ddb3de1635%3A0x2ebb9aa72502629d!2sJardins+de+D%C3%A9m%C3%A9ter+Vulaines+sur+Seine!5e0!3m2!1sfr!2sfr!4v1390994997641" width="600" height="450" frameborder="0" style="border:0"></iframe>
+      <!-- end google map --> 
+    </div>
+    <!--map-container ends here--> 
+  </div>
+  <!--map-holder ends here--> 
+</section>
+
+<!-- Contact Content Part - Contact Form ==================================================
+================================================== -->
+<div class="container">
+  <div class="blankSeparator"></div>
+  <!-- Contact Sidebar ==================================================
+================================================== -->
+  <div class="one_third contactsidebar">
+    <section class="first">
+      <h3>Les Jardins de D&eacute;m&eacute;ter</h3>
+      <div class="boxtwosep"></div>
+      <ul class="contactsidebarList">
+        <li>22 bis Chemin de la Touffe</li>
+        <li>T&eacute;l&eacute;phone: 01 60 74 38 28</li>
+        <li>Email: jardins.de.demeter@wanadoo.fr</li>
+      </ul>
+    </section>
+    <section class="third">
+      <h3>Epicerie solidaire</h3>
+      <div class="boxtwosep"></div>
+      <h5><span class="color">Solidarit&eacute; D&eacute;m&eacute;ter</span></h5>
+      <ul class="contactsidebarList">
+        <li>Quai St&eacute;phane MALLARM&Eacute;</li>
+        <li>77870 Vulaines-sur-Seine</li>
+        <li>T&eacute;l&eacute;phone: 01.60.74.06.82</li>
+      </ul>
+      <h5><span class="color">Maison de la Solidarit&eacute;</span> Si&egrave;ge social</h5>
+      <ul class="contactsidebarList">
+        <li>3, Route de Barbeau</li>
+        <li>77850 H&eacute;ricy</li>
+        <li>T&eacute;l&eacute;phone: 06....94.40.04</li>
+        <li>Email: solidarite.demeter@gmail.com</li>
+      </ul>
+    </section>
+  </div>
+  <!-- one_third ends here -->
+  <div class="two_third lastcolumn contact1">
+    <div id="contactForm">
+      <h2>Envoyer un message</h2>
+      <div class="sepContainer"></div>
+      <form action="#" method="post" id="contact_form">
+        <div class="name">
+          <label for="name">Votre nom :</label>
+          <p> Entrez votre ident&eacute; compl&egrave;te</p>
+          <input id=name name=email type=text placeholder="exemple : Mr. Jacques Martin" required />
+        </div>
+        <div class="email">
+          <label for="email">Votre Email:</label>
+          <p> Entrez votre adresse email</p>
+          <input id=email name=email type=email placeholder="prenom.nom@domaine.fr" required />
+        </div>
+        <div class="message">
+          <label for="message">Votre Message:</label>
+          <p> Entrez votre question</p>
+          <textarea id=message name=message rows=6 cols=10 required></textarea>
+        </div>
+        <div id="loader">
+          <input type="button" value="Envoi" />
+        </div>
+      </form>
+    </div>
+    <!-- end contactForm --> 
+  </div>
+</div>
+<div class="blankSeparator2"></div>
+{%endblock%}
+
+

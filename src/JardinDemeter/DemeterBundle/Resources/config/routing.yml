@@ -1,0 +1,62 @@
+index:
+    resource: "@JardinDemeterDemeterBundle/Controller/AccueilController.php"
+    type: annotation
+    prefix: /demeter
+
+contact:
+    resource: "@JardinDemeterDemeterBundle/Controller/ContactController.php"
+    type: annotation
+    prefix: /demeter
+    
+solidarite:
+    resource: "@JardinDemeterDemeterBundle/Controller/SolidariteController.php"
+    type: annotation
+    prefix: /demeter
+    
+objectifs:
+    resource: "@JardinDemeterDemeterBundle/Controller/AssociationController.php"
+    type: annotation
+    prefix: /demeter
+    
+fonctionnement:
+    resource: "@JardinDemeterDemeterBundle/Controller/AssociationController.php"
+    type: annotation
+    prefix: /demeter
+    
+processus:
+    resource: "@JardinDemeterDemeterBundle/Controller/AssociationController.php"
+    type: annotation
+    prefix: /demeter
+    
+chantier:
+    resource: "@JardinDemeterDemeterBundle/Controller/InsertionController.php"
+    type: annotation
+    prefix: /demeter
+    
+jardins:
+    resource: "@JardinDemeterDemeterBundle/Controller/InsertionController.php"
+    type: annotation
+    prefix: /demeter
+    
+touffe:
+    resource: "@JardinDemeterDemeterBundle/Controller/InsertionController.php"
+    type: annotation
+    prefix: /demeter
+    
+rodes:
+    resource: "@JardinDemeterDemeterBundle/Controller/InsertionController.php"
+    type: annotation
+    prefix: /demeter
+    
+insererGest:
+    resource: "@JardinDemeterDemeterBundle/Controller/GestionController.php"
+    type: annotation
+    prefix: /demeter
+    
+
+
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout

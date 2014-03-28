@@ -1,0 +1,2 @@
+JardinDemeterDemeterBundle:
+    resource: "@JardinDemeterDemeterBundle/Resources/config/routing.yml"

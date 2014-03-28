@@ -1,0 +1,118 @@
+{% extends "JardinDemeterDemeterBundle::main.html.twig" %}
+{%block content%}
+<div class="blankSeparator"></div>
+<div class="container">
+ <div class="info">
+  <div class="one_third">
+
+    {% if error %}
+    <div>{{error.message}}</div>
+    {%endif%}.
+    {%if app.user%}
+    <img src="{{asset('images/solidarite2.png')}}">
+    {%else%}
+           <div id="adminlog">
+    <h2>Administration</h2>
+    <div id="contactForm">
+     <form action="{{ path('login_check') }}" method="post">
+      <div class="name">
+       <label for="name">Votre login :</label>
+       <input id="username" type="text" name="_username" placeholder="" required />
+      </div>
+      <div class="email">
+       <label for="passe">Votre mot de passe :</label>
+       <input id="password" type="password" name="_password" placeholder="" required />
+      </div>
+       <input type="submit" value="Envoi"/>
+     </form>
+    </div>
+      {%endif%}
+   </div>    
+  </div>
+  
+  <div class="two_third lastcolumn">
+      {% if app.user %}
+        {{app.user.login}}
+      {%endif%}
+      
+      
+      
+        
+   <h2>Les Jardins de D&eacute;m&eacute;ter</h2>
+   <p>
+    Insertion socioprofessionnelle de personnes en grande difficult&eacute; par le mara&icirc;chage
+    et l'entretien d'espaces verts.  
+   </p>
+   <h2>Solidarit&eacute; D&eacute;m&eacute;ter</h2>
+   <p>
+    L'&eacute;picerie solidaire a pour objectif d'apporter une aide alimentaire &agrave; des personnes en
+    difficult&eacute;s tout en respectant leur autonomie et en favorisant leur participation active.
+   </p>
+   <h2>Le Village D&eacute;m&eacute;ter</h2>
+   <p>
+    "Les Jardins de D&eacute;m&eacute;ter" et "La Maison du Bornage" pour le projet d'implantation d'un h&eacute;bergement
+     touristique &eacute;cologique sur la commune Vulaines-sur-Seine
+   </p>
+  </div>
+ </div>
+</div>
+
+<!-- Home Content Part - Box Two ==================================================
+================================================== -->
+<div class="container clients">                                                                                                         
+  <div class="sepContainer"></div>
+  <h2>Nos Partenaires</h2>
+  <div class="one_sixth">
+   <a href="http://www.pole-emploi.fr/accueil/" target="_blank" title="P&ocirc;le Emploi">
+   <img src="{{ asset('./images/partenaires/poleemploi.gif') }}" alt="P&ocirc;le Emploi" /></a>
+  </div>
+  <div class="one_sixth">
+   <a href="http://www.idf.direccte.gouv.fr/accueil-31-.html" target="_blank" title="Direccte &Icirc;le de France">
+    <img src="{{ asset('./images/partenaires/direccte.gif') }}" /></a>
+  </div>
+  <div class="one_sixth">
+   <a href="http://www.ildefrance.fr/" target="_blank" title="&Icirc;le de France">
+    <img src="{{ asset('./images/partenaires/crif.gif') }}" /></a>
+  </div>
+  <div class="one_sixth">
+   <a href="http://www.seine-et-marne.fr/" target="_blank" title="Conseil G&eacute;n&eacute;ral de Seine et Marne">
+    <img src="{{ asset('./images/partenaires/conseilgeneral77.gif') }}" /></a>
+  </div>
+  <div class="one_sixth">
+   <a href="http://www.agglo-melunvaldeseine.fr/" target="_blank" title="Communaut&eacute; d'agglom&eacute;ration">
+    <img src="{{ asset('./images/partenaires/melunvaldeseine.gif') }}" />
+  </div>
+  <div class="one_sixth lastcolumn">
+   <a href="http://www.entreseineetforet.fr/" target="_blank" title="Communaut&eacute; de Communes">
+    <img src="{{asset('./images/partenaires/entreseineetforet.gif') }}" /></a>
+  </div>
+  &nbsp;
+  <div class="one_sixth">
+   <a href="http://www.plie-melun-valdeseine.org/accueil2/index.html" target="_blank" title="Insertion et Emploi">
+    <img src="{{ asset('./images/partenaires/plie.gif') }}" /></a>
+  </div>
+  <div class="one_sixth">
+   <a href="http://www.msa.fr/" target="_blank" title="msa.fr">
+    <img src="{{ asset('./images/partenaires/msa.gif') }}" /></a>
+  </div>
+  <div class="one_sixth">
+   <a href="http://www.fondation.veolia.com/fr/" target="_blank" title="Fondation VEOLIA">
+    <img src="{{ asset('./images/partenaires/veolia.gif') }}" /></a>
+  </div>
+  <div class="one_sixth">
+   <a href="http://www.fondation-vinci.com/fondation/fr/page/accueil.htm" target="_blank" title="Fondation VINCI">
+    <img src="{{ asset('./images/partenaires/vinci.gif') }}" /></a>
+  </div>
+  <div class="one_sixth">
+   <a href="http://www.fondation-macif.org/" target="_blank" title="Fondation MACIF">
+    <img src="{{ asset('./images/partenaires/macif.gif') }}" /></a>
+  </div>
+  <div class="one_sixth lastcolumn">
+   <a href="http://iledefrance.chantierecole.org/" target="_blank" title="Chantier Ecole">
+    <img src="{{ asset('./images/partenaires/chantierecole.gif') }}" /></a>
+  </div>
+</div>
+<!-- end container --> 
+{%endblock%}
+
+

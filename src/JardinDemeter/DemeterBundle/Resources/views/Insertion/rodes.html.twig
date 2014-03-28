@@ -1,0 +1,67 @@
+{% extends "JardinDemeterDemeterBundle::main.html.twig" %}
+{%block content%}
+
+<div class="blankSeparator"></div>
+<div class="container portfolio">
+ <div class="two_third">
+  <h2>Site des Trois Rodes &agrave; Vaux-le-Penil</h2>
+  <p>
+   Cr&eacute;ation d'un nouveau site d'activit&eacute;s sur un terrain de 5000m&sup2; mis
+   &agrave; disposition par la SPA pour accueillir une deuxi&egrave;me &eacute;quipe
+   essentiellement constitut&eacute;e de personnes envoy&eacute;es par les structures
+   d'insertion de la Communaut&eacute; d'Agglom&eacute;ration de Melun Val de Seine.</p>
+  <p>
+   Les produits issus des r&eacute;coltes mara&icirc;ch&egrave;res est distribu&eacute; &grave;
+   l'ensemble des structures caritatives du secteur.
+  </p>
+ </div>  
+ <div class="one_third lastcolumn"> 
+  <h2>Carte d'Identit&eacute du site des Trois Rodes</h2>
+  <p>
+   &bull; un <span style="color:red">encadrant technique</span><br />
+   &bull; un <span style="color:red">aide encadrant</span><br />
+   &bull; 11 <span style="color:red">salari&eacute;s</span> en contrat aid&eacute; dont 75% de femmes      
+  </p>
+  <p class="portfolio">Travaux r&eacute;alis&eacute;s sur le site</p>
+  <p>
+   &bull; Remise en &eacute;tat et d&eacute;veloppement du site : plantations compl&eacute;mentaires de fruits rouges<br />
+   &bull; Construction d'un local technique et d'un bureau ainsi qu'un poulailler<br />
+   &bull; Projection 2011 : mise en place d'un nouveau tunnel
+  </p> 
+ </div>
+</div>
+
+<div class="sepContainer"></div>
+
+<div class="container portfolio4columns">
+
+ <ul class="tabs">
+  <li><a class="active" href="#rodes">Site des Trois Rodes<span class="plus1">+</span></a></li>
+ </ul> 
+  
+   <li class="active clearfix" id="bassecour">
+    <div class="one_fourth">
+     <section class="boxfour">
+      <a href="{{asset('./images/insertion/rodes/rodes01.jpg')}}" class="prettyPhoto[gal]">
+       <img src="{{asset('./images/insertion/rodes/rodesM01.jpg')}}" alt=""/></a>
+     </section>
+    </div>
+    <div class="one_fourth">
+     <section class="boxfour">
+      <a href="{{asset('./images/insertion/rodes/rodes02.jpg')}}" class="prettyPhoto[gal]">
+       <img src="{{asset('./images/insertion/rodes/rodesM02.jpg')}}" alt=""/></a>
+     </section>
+    </div>
+    <div class="one_fourth">
+     <section class="boxfour">
+      <a href="{{asset('./images/insertion/rodes/rodes03.jpg')}}" class="prettyPhoto[gal]">
+       <img src="{{asset('./images/insertion/rodes/rodesM03.jpg')}}" alt=""/></a>
+     </section>
+    </div>
+   </li>
+    
+  </ul>
+</div>
+<div class="blankSeparator1"></div>
+
+{%endblock%}

@@ -1,0 +1,23 @@
+security:
+   firewalls:
+       dev:
+         pattern: ^/(_(profiler|wdt)|css|images|js)/
+         security: false
+       secured_area:
+           pattern: ^/
+           anonymous: ~
+           form_login:
+              login_path: /demeter/index
+              check_path: /login_check
+              default_target_path: /demeter/index
+           logout:
+              path: /logout
+              target: /demeter/index
+           security: true
+           anonymous: true
+           
+   providers:
+      main:
+          entity: { class: JardinDemeter\DemeterBundle\Entity\Connexion, property: login }
+   encoders:
+        JardinDemeter\DemeterBundle\Entity\Connexion: plaintext
